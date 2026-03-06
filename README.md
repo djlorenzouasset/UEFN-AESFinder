@@ -1,36 +1,24 @@
-# AESFinder
+# UEFN-AESFinder
 
-Dll that allows you to dump the main AES key of Fortnite through game's memory (original project of <a href="https://github.com/Fischsalat">Fischsalat</a>, reworked by me).
+Dll that allows you to dump the main AES key of Fortnite through the Unreal Editor (UEFN). I wanted to port [AESDumpster](https://github.com/GHFear/AESDumpster) (console application) to a UEFN specific DLL to inject into the game. Special thanks to [@notkrae](https://x.com/notkrae) for helping & testing all* the UEFN versions.
 
 > [!WARNING]
-> Do not inject this DLL with the AntiCheat enabled. Use a private server like <a href="https://discord.gg/HR2TjuEb">Carbon</a>.
+> Do not inject this DLL in the main game exe. Instead, use UEFN with [Carbon](https://discord.gg/vj3AW6NC)
 
 ## Installation
 
-1. Clone the source code with <a href="https://git-scm.com/downloads">git</a>: `git clone https://github.com/djlorenzouasset/AESFinder`
-
-2. Build the project using <a href="https://visualstudio.microsoft.com/downloads">Visual Studio 2022</a> or <a href="https://www.jetbrains.com/rider">JetBrains Rider</a>.
+1. Clone the source code with [git](https://git-scm.com/downloads): `git clone https://github.com/djlorenzouasset/UEFN-AESFinder`
+2. Build the project using your preferred IDE.
 
 ## How to use
 
-1. Run Carbon private server (get it from <a href="https://discord.gg/HR2TjuEb">here</a>).
+1. Run Carbon private server (get it from [here](https://discord.gg/vj3AW6NC)).
+2. Use your preferred injector to inject the DLL in the UEFN process (UnrealEditorFortnite-Win64-Shipping.exe).
+3. Once the DLL gets injected a file (`aes_list.txt`) will be saved in the directory `C:/UEFN-AESFinder/` containing all found keys.
 
-2. Use <a href="https://mega.nz/file/MUhUlaqa#PI0ubSy_sQc4GouDPnZbulNSgQRUNIJeXNwLb2LnKhk">UUUClient</a> (or others injectors) for inject the DLL in the Fortnite process.
+### Change save path
 
-3. Once the DLL gets injected, a file will be saved in the default directory `C:/AESFinder` containing the dumped AES key.
-
-> [!IMPORTANT]
-> Inject the DLL into Fortnite right after starting it.
-
-## Program Settings
-
-This program also allow you to decide if save the dumped AES key in a file or not, and in what directory save it (default is `C:/AESFinder`). You can change these settings in the `globals.h` file:
-
-- `Settings::bShouldSaveFile`: Leave it as default if you want to save the dumped AES key or set it to `false` for skip the file save.
-- `Settings::SavePath`: Leave it as default if you want to use the default directory `C:/AESFinder`, or set a new one (the program will automatically create a new one if the inserted one doesn't exist).
+To change the location where the AES keys are saved, open the file `main.cpp` (`../UEFN-AESFinder/Private/main.cpp`) and edit the `OutputPath` var with the preferred location.
 
 ## Contributing 
-Contributions are welcome, feel free to create pull requests or report issues on the GitHub repository.
-
-## License
-This project is licensed under the MIT License.
+Contributions are welcome, feel free to create pull requests.

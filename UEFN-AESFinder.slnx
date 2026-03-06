@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="UEFN-AESFinder/UEFN-AESFinder.vcxproj" Id="74fd4c80-69a0-4222-84e6-e66990cfb7ba" />
+</Solution>

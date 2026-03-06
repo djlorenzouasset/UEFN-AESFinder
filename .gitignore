@@ -24,16 +24,13 @@
 *.lai
 *.la
 *.a
+*.lib
 
 # Executables
 *.exe
 *.out
 *.app
 
-# Folders
 .vs/
-x64/
-AESFinder/x64/
-
-# User Files
 *.user
+x64/

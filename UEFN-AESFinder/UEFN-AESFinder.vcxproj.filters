@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Public\framework.h" />
+    <ClInclude Include="Public\pch.h" />
+    <ClInclude Include="Public\Finder.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Private\dllmain.cpp" />
+    <ClCompile Include="Private\pch.cpp" />
+    <ClCompile Include="Private\Finder.cpp" />
+  </ItemGroup>
+</Project>
